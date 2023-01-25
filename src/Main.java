@@ -1,4 +1,7 @@
+import java.time.Year;
+
 public class Main {
+
     public static boolean isLeapYear(int year) {
         if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) {
             System.out.println(year + " год является високосным");
@@ -56,8 +59,9 @@ public class Main {
         iOS = 0;
         Android = 1;
         */
-        int clientOS = 1;
-        int clientDeviceYear = 2015;
+        int clientOS = 0;
+        int clientDeviceYear = Year.now().getValue();
+
         selectClientOS(clientOS, clientDeviceYear);
     }
 
@@ -68,4 +72,9 @@ public class Main {
 
         delivery(deliveryDistance);
     }
-}
+
+
+
+
+
+    }
